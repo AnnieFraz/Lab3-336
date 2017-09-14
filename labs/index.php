@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Index of My Works </title>
+        <title>Index of My Labs </title>
     </head>
     <body>
     <table style="width:100%">
@@ -14,7 +14,6 @@
   </tr>
   <tr>
     <td><a href="lab1">Lab 1</a></td>
-    <td><a href="assignments/hmwrk1/indexassignone.html">Assignment 1</td>
   </tr>
 </table>
     </body>

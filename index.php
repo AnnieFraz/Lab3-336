@@ -14,8 +14,8 @@
    
   </tr>
   <tr>
-    <td><a href="labs">Lab 1</a></td>
-    <td><a href="assignments/hmwrk1/indexassignone.html">Assignment 1</td>
+    <td><a href="labs">Labs</a></td>
+    <td><a href="assignments">Assignments</td>
   </tr>
 </table>
     </body>
