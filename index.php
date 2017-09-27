@@ -10,30 +10,27 @@
     <body>
         <h1>SilverJack</h1>
         
-        
-        
          <div id ="player1">
         <?php
         include 'inc/functions.php';
-        getHand();
+        player(1);
         ?>
         </div>
         <div id = "player2">
        <?php
-        getHand();
+        player(2);
         ?>
         </div>
         <div id ="player3">
             <?php
-            getHand();
+            player(3);
             ?>
         </div>
         <div id = "player4">
             <?php
-            getHand();
+            player(4);
             ?>
         </div>
-
 
     </body>
 </html>
