@@ -1,7 +1,6 @@
 
 body{
     background-color: white; 
-    
 }
 
 h1{
@@ -13,6 +12,8 @@ h1{
 
 #board{
     font-family: 'Ariel', cursive;
+    top:200px;
+    left: 200px;
     width:600px;
     height:600px;
     position: relative;
@@ -24,21 +25,17 @@ h1{
 /*}*/
 
 #player1, #player2, #player3, #player4{
-    left:100px;
+    left:250px;
 }
 #player1{
     top: 250px;
-    left: 100px;
 }
 #player2{
     top: 300px;
-    left:100px;
 }
 #player3{
     top: 350px;
-    left: 100px;
 }
 #player4{
     top: 400px;
-    left:100px;
 }

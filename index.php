@@ -1,18 +1,48 @@
-<?php
-?>
-
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Index of My Works </title>
+        <title>SilverJack</title>
+        <style>
+            @import url("css/style.css");
+        </style>
     </head>
     <body>
-    <table style="width:100%">
-  <tr>
-    <td><a href="labs">Labs</a></td>
-    <td><a href="assignments">Assignments</a></td>
-    
-  </tr>
-</table>
+        <h1>SilverJack</h1>
+        
+        
+        
+         <div id ="player1">
+        <?php
+        include 'inc/functions.php';
+        getHand();
+        ?>
+        </div>
+        <div id = "player2">
+       <?php
+        getHand();
+        ?>
+        </div>
+        <div id ="player3">
+            <?php
+            getHand();
+            ?>
+        </div>
+        <div id = "player4">
+            <?php
+            getHand();
+            ?>
+        </div>
+        
+        
+        
+        
+       
+        
+          
+   
+                
+           
+
+
     </body>
 </html>
