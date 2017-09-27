@@ -1,0 +1,41 @@
+
+body{
+    background-color: white; 
+}
+
+h1{
+    background: linear-gradient(to bottom right, grey, black);
+    text-align: center;
+    color: white;
+    font-family: 'Ariel', cursive;
+}
+
+#board{
+    font-family: 'Ariel', cursive;
+    top:200px;
+    left: 200px;
+    width:600px;
+    height:600px;
+    position: relative;
+    
+}
+/*#card1, #card2, #card3, #card4{*/
+/*    top: 250px;*/
+/*    position: absolute;*/
+/*}*/
+
+#player1, #player2, #player3, #player4{
+    left:250px;
+}
+#player1{
+    top: 250px;
+}
+#player2{
+    top: 300px;
+}
+#player3{
+    top: 350px;
+}
+#player4{
+    top: 400px;
+}
