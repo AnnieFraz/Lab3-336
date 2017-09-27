@@ -24,10 +24,11 @@
   
 function player($No){
     //'player$No'
-    for($i=$No; $i <= 3; $i++){
-        getHand();
+    //for($i=$No; $i <= 3; $i++){
+        
     echo "<img id='player$No' src='img/players/player$No.png' width='50'/>";
-    }
+    getHand();
+    //}
     
 }
 
