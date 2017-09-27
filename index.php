@@ -9,13 +9,9 @@
     <body>
     <table style="width:100%">
   <tr>
-    <td>Labs</td>
-    <td>Assignments</td> 
-   
-  </tr>
-  <tr>
     <td><a href="labs">Labs</a></td>
-    <td><a href="assignments">Assignments</td>
+    <td><a href="assignments">Assignments</a></td>
+    
   </tr>
 </table>
     </body>

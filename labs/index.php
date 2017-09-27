@@ -14,7 +14,8 @@
   </tr>
   <tr>
     <td><a href="lab1">Lab 1</a></td>
-      <td><a href="lab2">Lab 2</a></td>
+    <td><a href="lab2">Lab 2</a></td>
+    <td><a href="lab3">Lab 3</a></td>
   </tr>
 </table>
     </body>

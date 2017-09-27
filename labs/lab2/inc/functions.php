@@ -60,7 +60,7 @@ function displaySymbol($randomValue, $pos)
             case 3: $symbol = "grapes";
                 break;
         }
-        echo "<img id='reel$pos' src='img/$symbol.png' alt = '$symbol' title='".ucfirst($symbol)."' width='70'/>";
+        echo "<img id='reel$pos' src='img/$symbol.png' alt = '$symbolb' title='".ucfirst($symbol)."' width='70'/>";
   }  
 
 function play()

@@ -13,6 +13,7 @@
   </tr>
   <tr>
     <td><a href="hmwrk1">Homework 1</td>
+     <td><a href="hmwrk2">Homework 2</td>
   </tr>
 </table>
     </body>

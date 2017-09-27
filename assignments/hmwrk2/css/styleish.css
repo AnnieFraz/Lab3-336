@@ -6,24 +6,40 @@
     
     body {
         background-color: black;
-        background-image:url("../img/bg7.jpg");
+        background-image:url("../img/doge.png");
         color: white;
         
     }
     
     #main {
         font-family: 'Baloo Bhaina', cursive;
-        background-image:url("../img/machine.png");
+     
         width:600px;
         height:500px;
         position:relative;
         margin:0 auto;
     }
     
-    #reel1, #reel2, #reel3 {
-        top:248px;
+    #reel1, #reel2, #reel3, #reel4 {
+        top:100px;
         position:absolute;
     }
+    
+    #reel5, #reel6, #reel7, #reel8 {
+        top:200px;
+        position:absolute;
+    }
+    
+     #reel9, #reel10, #reel11, #reel12 {
+        top:300px;
+        position:absolute;
+    }
+    
+     #reel13, #reel14, #reel15, #reel16 {
+        top:400px;
+        position:absolute;
+    }
+  
     
     #reel1{
         left:145px;
@@ -34,6 +50,47 @@
     #reel3{
         left:357px;
     }
+    #reel4{
+        left:464px;
+    }
+     #reel5{
+        left:145px;
+    }
+    #reel6{
+        left:252px;
+    }
+    #reel7{
+        left:357px;
+    }
+    #reel8{
+        left:464px;
+    }
+    #reel9{
+        left:145px;
+    }
+    #reel10{
+        left:252px;
+    }
+    #reel11{
+        left:357px;
+    }
+    #reel12{
+        left:464px;
+    }
+     #reel13{
+        left:145px;
+    }
+    #reel14{
+        left:252px;
+    }
+    #reel15{
+        left:357px;
+    }
+    #reel16{
+        left:464px;
+    }
+  
+    
     
     input{
         top:75px;
