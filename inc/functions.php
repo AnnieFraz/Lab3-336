@@ -33,6 +33,7 @@ function player($No){
 
 function displayHand($pos, $suitesRandom, $numberRandom)
 {
+    //$symbol =
 switch ($suitesRandom)
             {
                 case 0: $symbol ='clubs';
@@ -54,8 +55,13 @@ function getHand()
     for ($i=0; $i<=4; $i++)
     {
     $suitesRandom = rand(0,3);
+    //$suites = $suitesRandom;
+    //$number = $numberRandom;
+    //$handArray = array($suites, $number);
+    //displayHand($i, handArray[$suites][$number])
     $numberRandom = rand(1,13);
     displayHand($i, $suitesRandom, $numberRandom);
+    
      }
       //displayHand($i, $suitesRandom, $numberRandom); 
      # $handArray[i] = array($suitesRandom, $numberRandom);
