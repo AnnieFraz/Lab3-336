@@ -53,7 +53,7 @@ switch ($suitesRandom)
 
 function getHand()
 {
-    for ($i=0; $i<=4; $i++)
+    for ($i=0; $i<=3; $i++)
     {
     $suitesRandom = rand(0,3);
     //$suites = $suitesRandom;
