@@ -98,6 +98,7 @@ function getHand()
                 $cont = false;
             }
     }
+    
     //displayWinners($i, $numberRandom);
     
     }

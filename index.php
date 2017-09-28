@@ -8,8 +8,8 @@
     </head>
     <body>
         <h1>SilverJack</h1>
-        <div id = "board">
-         <div id ="player1">
+        <div id = "board" >
+         <div id ="player1" >
         <?php
         include 'inc/functions.php';
         player(1);
