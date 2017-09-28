@@ -12,8 +12,8 @@ h1{
 
 #board{
     font-family: 'Ariel', cursive;
-    top:200px;
-    left: 200px;
+    top:100px;
+    left: 500px;
     width:600px;
     height:600px;
     position: relative;
@@ -25,17 +25,17 @@ h1{
 /*}*/
 
 #player1, #player2, #player3, #player4{
-    left:250px;
+    left:400px;
 }
 #player1{
-    top: 250px;
+    top: 100px;
 }
 #player2{
-    top: 300px;
+    top: 150px;
 }
 #player3{
-    top: 350px;
+    top: 200px;
 }
 #player4{
-    top: 400px;
+    top: 250px;
 }

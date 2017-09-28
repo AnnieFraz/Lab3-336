@@ -1,8 +1,8 @@
-<?php
-// function displayWinners($winner, $handArray)
+ <?php
+// function displayWinners($pos, $numberRandom)
 // {
-//   #global $score; 
-//   #$score = $score . $handArray[0][i];
+//   global $score; 
+//   $score = $score + $numberRandom;
 //   echo $winner . " wins " . $score . " points!";
 // }
 // function calculateScore($iNo, $score){
@@ -28,13 +28,14 @@ function player($No){
         
     echo "<img id='player$No' src='img/players/player$No.png' width='50'/>";
     getHand();
-    //}
+    
     
 }
 
 function displayHand($pos, $suitesRandom, $numberRandom)
 {
-    //$symbol =
+   // $symbol = $handArray[$pos][0];
+    //$numberRandom = $handArray[$pos][$number];
 switch ($suitesRandom)
             {
                 case 0: $symbol ='clubs';
@@ -53,17 +54,57 @@ switch ($suitesRandom)
 
 function getHand()
 {
-    for ($i=0; $i<=4; $i++)
+    $score = 0; 
+    $cont = true;
+    while($score <= 42 && $cont == true)
     {
     $suitesRandom = rand(0,3);
-    //$suites = $suitesRandom;
-    //$number = $numberRandom;
-    //$handArray = array($suites, $number);
-    //displayHand($i, handArray[$suites][$number])
     $numberRandom = rand(1,13);
-    displayHand($i, $suitesRandom, $numberRandom);
+    $suites = $suitesRandom;
+    $number = $numberRandom;
     
-     }
+    $handArray = array($suites, $number);
+   // displayHand($i, $handArray,$suitesRandom,$number);
+    displayHand($i, $suitesRandom, $numberRandom);
+    $score = $score + $numberRandom;
+    
+    if ($score == 10)
+    {
+        $cont = true;
+    }
+    
+    elseif ($score == 20)
+    {
+        $pro = rand(0,10);
+        if ($pro == 0)
+            {
+                $cont = false;
+            }
+    }
+    
+    elseif ($score == 30)
+    {
+        $pro = rand(0,5);
+        if ($pro == 0)
+            {
+                $cont = false;
+            }
+    }
+    elseif ($score == 40)
+    {
+        $pro = rand(0,1);
+        if ($pro == 0)
+            {
+                $cont = false;
+            }
+    }
+    //displayWinners($i, $numberRandom);
+    
+    }
+    echo $score;
+    //displayHand($i, $suitesRandom, $numberRandom);
+    
+     
       //displayHand($i, $suitesRandom, $numberRandom); 
      # $handArray[i] = array($suitesRandom, $numberRandom);
 }

@@ -8,7 +8,7 @@
     </head>
     <body>
         <h1>SilverJack</h1>
-        
+        <div id = "board">
          <div id ="player1">
         <?php
         include 'inc/functions.php';
@@ -29,7 +29,9 @@
             <?php
             player(4);
             ?>
-        
+        <form>
+            <input type="submit" value="Play Again"/>
+        </form>
   
     </body>
 </html>
