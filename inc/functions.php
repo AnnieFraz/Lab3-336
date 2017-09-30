@@ -65,6 +65,7 @@ function getHand()
         echo ${"score" . $j};
         echo "<br>";
     }
+<<<<<<< HEAD
     $p1win = $score2+$score3+$score4;
     $p2win = $score1+$score3+$score4;   //win totals
     $p3win = $score2+$score1+$score4;
@@ -91,6 +92,11 @@ function getHand()
             echo "<h1>Dani wins $p4win points</h1>";
             break;
         }
+=======
+    
+    //displayWinners($i, $numberRandom);
+    
+>>>>>>> a4107784a9610cd732f6e403bcca46ac08a8d4f3
     }
      
    
