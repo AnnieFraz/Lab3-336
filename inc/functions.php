@@ -1,40 +1,8 @@
-<?php
-// function displayWinners($winner, $handArray)
-// {
-//   #global $score; 
-//   #$score = $score . $handArray[0][i];
-//   echo $winner . " wins " . $score . " points!";
-// }
-// function calculateScore($iNo, $score){
-//     for ($i =0; $i < 3; $i++)
-//     {
-//         for ($j=1; $j< 13; $j++)
-//         {
-//          $score = $score . $handArray[$j][$i];   
-//         }
-//     }
-//     if ($score > 42){
-//         echo $playerNo . "loses";
-//     }
-    
-// }
-// function replay(){
-//     player(1);
-// }
-  
-function player($No){
-    //'player$No'
-    //for($i=$No; $i <= 3; $i++){
-        
-    echo "<img id='player$No' src='img/players/player$No.png' width='50'/>";
-    getHand();
-    //}
-    
-}
+ <?php
 
 function displayHand($pos, $suitesRandom, $numberRandom)
 {
-    //$symbol =
+  
 switch ($suitesRandom)
             {
                 case 0: $symbol ='clubs';
@@ -47,25 +15,85 @@ switch ($suitesRandom)
                     break;
             }
                 
-            echo "<img id='card$pos' src='img/$symbol/$numberRandom.png' width='50'/>";
+            echo "<img id='card$pos' src='img/$symbol/$numberRandom.png' width='75'/>";
            
 }
 
 function getHand()
 {
-    for ($i=0; $i<=3; $i++)
+    $taken = array(0,0,0,0); // for holding whether player has been used or not
+    $avail = array(); // for checking if a card has been used (not 100% working)
+    for ($n = 0; $n < 4; $n++)
     {
-    $suitesRandom = rand(0,3);
-    //$suites = $suitesRandom;
-    //$number = $numberRandom;
-    //$handArray = array($suites, $number);
-    //displayHand($i, handArray[$suites][$number])
-    $numberRandom = rand(1,13);
-    displayHand($i, $suitesRandom, $numberRandom);
+
+        $j = rand(1,4);             //from here to
+        while($taken[$j-1] == 10)
+        {
+                                        // makes sure each palyer is used once
+            $j = rand(1,4);
+        }
+        $taken[$j-1] = 10;          // here
+        echo "<img id='player$j' src='img/players/player$j.png' width='75'/>";
+        ${"score" . $j} = 0;
+        $cont = true;
+        while(${"score" . $j} <= 42 && $cont == true)
+        {
+            $suitesRandom = rand(0,3);
+            $numberRandom = rand(1,13);
+            if ($avail[$numberRandom][$suitesRandom] == 100)    //from here
+            {
+                //print($numberRandom." ".$suitesRandom);
+                $suitesRandom = rand(0,3);
+                $numberRandom = rand(1,13);
+            }
+            else                                                    //is supposed track cards (needs fix)
+            {
+                $avail[$numberRandom][$suitesRandom] = 100;
+                $suites = $suitesRandom;
+                $number = $numberRandom;
+            }
+                                                                //here
+            $handArray = array($suites, $number);
+            displayHand($i, $suitesRandom, $numberRandom);
+            ${"score" . $j} = ${"score" . $j} + $numberRandom;
     
-     }
-      //displayHand($i, $suitesRandom, $numberRandom); 
-     # $handArray[i] = array($suitesRandom, $numberRandom);
+            if (${"score" . $j} > 35 && ${"score" . $j} <=42)   // decides when to stop (adjust this to prevent multiple winners)
+            {
+                $cont = false;
+            }
+        }
+        echo ${"score" . $j};
+        echo "<br>";
+    }
+    $p1win = $score2+$score3+$score4;
+    $p2win = $score1+$score3+$score4;   //win totals
+    $p3win = $score2+$score1+$score4;
+    $p4win = $score2+$score3+$score1;
+    for ($s=42; $s > 35; $s--)
+    {
+        if ($score1 == $s)
+        {
+            echo "<h1>Cody wins $p1win points</h1>";
+            break;
+        }
+        elseif ($score2 == $s)
+        {
+            echo "<h1>Kara wins $p2win points</h1>";
+            break;
+        }
+        elseif ($score3 == $s)
+        {
+            echo "<h1>Fernando wins $p3win points</h1>";
+            break;
+        }
+        elseif ($score4 == $s)
+        {
+            echo "<h1>Dani wins $p4win points</h1>";
+            break;
+        }
+    }
+     
+   
 }
 ?>
 
