@@ -19,15 +19,9 @@ h2{
 
 #board{
     font-family: 'Ariel', cursive;
-<<<<<<< HEAD
-    top:50px;
-    left: 300px;
-    width:700px;
-=======
-    top:100px;
+    top:25px;
     left: 400px;
-    width:600px;
->>>>>>> a4107784a9610cd732f6e403bcca46ac08a8d4f3
+    width:700px;
     height:600px;
     border-color: black;
     position: relative;
