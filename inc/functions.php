@@ -28,8 +28,7 @@ function getHand()
             $j = rand(1,4);
         }
         $taken[$j-1] = 10;          
-        echo "<img id='player$j' src='img/players/player$j.png' width='75'/>";
-        echo  "<h2>cody</h2>";
+        echo "<img id='payer$j' src='img/players/payer$j.png' width='75'/>";
         ${"score" . $j} = 0;
         $cont = true;
         while(${"score" . $j} <= 42 && $cont == true)
