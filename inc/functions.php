@@ -2,7 +2,6 @@
 
 function displayHand($pos, $suitesRandom, $numberRandom)
 {
-  
 switch ($suitesRandom)
             {
                 case 0: $symbol ='clubs';
@@ -14,9 +13,7 @@ switch ($suitesRandom)
                 case 3: $symbol = 'spades';
                     break;
             }
-                
             echo "<img id='card$pos' src='img/$symbol/$numberRandom.png' width='75'/>";
-           
 }
 
 function getHand()
@@ -25,15 +22,14 @@ function getHand()
     $avail = array(); 
     for ($n = 0; $n < 4; $n++)
     {
-
-        $j = rand(1,4);             
-        while($taken[$j-1] == 10)
+        $j = rand(1,4);          
+        while($taken[$j-1] == 10) 
         {
-                                        
             $j = rand(1,4);
         }
         $taken[$j-1] = 10;          
         echo "<img id='player$j' src='img/players/player$j.png' width='75'/>";
+        echo  "<h2>cody</h2>";
         ${"score" . $j} = 0;
         $cont = true;
         while(${"score" . $j} <= 42 && $cont == true)
@@ -42,7 +38,6 @@ function getHand()
             $numberRandom = rand(1,13);
             if ($avail[$numberRandom][$suitesRandom] == 100)    
             {
-                //print($numberRandom." ".$suitesRandom);
                 $suitesRandom = rand(0,3);
                 $numberRandom = rand(1,13);
             }
@@ -65,6 +60,7 @@ function getHand()
         echo ${"score" . $j};
         echo "<br>";
     }
+
     $p1win = $score2+$score3+$score4;
     $p2win = $score1+$score3+$score4;  
     $p3win = $score2+$score1+$score4;
@@ -91,10 +87,7 @@ function getHand()
             echo "<h1>Dani wins $p4win points</h1>";
             break;
         }
-
     }
-     
-   
 }
 ?>
 

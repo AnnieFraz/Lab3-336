@@ -1,6 +1,4 @@
 <?php
-global $avail;
-$avail = array();
 ?>
 <!DOCTYPE html>
 <html>
@@ -12,8 +10,8 @@ $avail = array();
     </head>
     <body>
         <h1>SilverJack</h1>
+
         <div id = "board">
-        
         <?php
             include 'inc/functions.php';
             gethand();
@@ -22,8 +20,5 @@ $avail = array();
             <input type="submit" value="Play Again"/>
         </form>
         </div>
-       
-  
-
     </body>
 </html>

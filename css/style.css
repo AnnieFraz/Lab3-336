@@ -20,17 +20,14 @@ h2{
 #board{
     font-family: 'Ariel', cursive;
     top:25px;
-    left: 400px;
-    width:700px;
+    left: 200px;
+    width:800px;
     height:600px;
+    
     border-color: black;
     position: relative;
     
 }
-/*#card1, #card2, #card3, #card4{*/
-/*    top: 250px;*/
-/*    position: absolute;*/
-/*}*/
 
 #player1, #player2, #player3, #player4{
     left:100px;
@@ -56,5 +53,5 @@ input{
         font-weight:bold;
         color:black;
         cursor:pointer;
-        left:200px;
+        left:425px;
     }
