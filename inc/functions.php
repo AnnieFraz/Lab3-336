@@ -1,6 +1,6 @@
  <?php
 
-function displayHand($pos, $suitesRandom, $numberRandom)
+function displayHand($pos, $suitesRandom, $numberRandom)//displays the cards chosen at random
 {
 switch ($suitesRandom)
             {
@@ -16,10 +16,42 @@ switch ($suitesRandom)
             echo "<img id='card$pos' src='img/$symbol/$numberRandom.png' width='75'/>";
 }
 
+ 
+function findWinner($play1, $play2, $play3, $play4) //compares scores and prints out winner's points
+{
+    $p1win = $play2+$play3+$play4;
+    $p2win = $play1+$play3+$play4;  
+    $p3win = $play2+$play1+$play4;
+    $p4win = $play2+$play3+$play1;
+    for ($s=42; $s > 30; $s--)
+    {
+        if ($play1 == $s)
+        {
+            echo "<h1>Cody wins $p1win points</h1>";
+            break;
+        }
+        elseif ($play2 == $s)
+        {
+            echo "<h1>Kara wins $p2win points</h1>";
+            break;
+        }
+        elseif ($play3 == $s)
+        {
+            echo "<h1>Fernando wins $p3win points</h1>";
+            break;
+        }
+        elseif ($play4 == $s)
+        {
+            echo "<h1>Dani wins $p4win points</h1>";
+            break;
+        }     
+     }   
+}
+
 function getHand()
 {
-    $taken = array(0,0,0,0); 
-    $avail = array(); 
+    $taken = array(0,0,0,0); //keeps track of which players have already gone
+    $avail = array();       //keeps track of available cards
     for ($n = 0; $n < 4; $n++)
     {
         $j = rand(1,4);          
@@ -28,14 +60,14 @@ function getHand()
             $j = rand(1,4);
         }
         $taken[$j-1] = 10;          
-        echo "<img id='payer$j' src='img/players/payer$j.png' width='75'/>";
+        echo "<img id='payer$j' src='img/players/payer$j.png' width='75'/>";    //prints player images
         ${"score" . $j} = 0;
         $cont = true;
-        while(${"score" . $j} <= 42 && $cont == true)
+        while(${"score" . $j} <= 42 && $cont == true)   //selects the random numbers and passes them to displayHand
         {
             $suitesRandom = rand(0,3);
             $numberRandom = rand(1,13);
-            if ($avail[$numberRandom][$suitesRandom] == 100)    
+            if ($avail[$numberRandom][$suitesRandom] == 100)    //prevents same card from being drawn
             {
                 $suitesRandom = rand(0,3);
                 $numberRandom = rand(1,13);
@@ -51,43 +83,15 @@ function getHand()
             displayHand($i, $suitesRandom, $numberRandom);
             ${"score" . $j} = ${"score" . $j} + $numberRandom;
     
-            if (${"score" . $j} > 30 && ${"score" . $j} <=42)   
+            if (${"score" . $j} > 30 && ${"score" . $j} <=42)   //stops the draw process
             {
                 $cont = false;
             }
         }
-        echo ${"score" . $j};
+        echo ${"score" . $j}; //prints indivdual scores
         echo "<br>";
     }
-
-    $p1win = $score2+$score3+$score4;
-    $p2win = $score1+$score3+$score4;  
-    $p3win = $score2+$score1+$score4;
-    $p4win = $score2+$score3+$score1;
-    for ($s=42; $s > 30; $s--)
-    {
-        if ($score1 == $s)
-        {
-            echo "<h1>Cody wins $p1win points</h1>";
-            break;
-        }
-        elseif ($score2 == $s)
-        {
-            echo "<h1>Kara wins $p2win points</h1>";
-            break;
-        }
-        elseif ($score3 == $s)
-        {
-            echo "<h1>Fernando wins $p3win points</h1>";
-            break;
-        }
-        elseif ($score4 == $s)
-        {
-            echo "<h1>Dani wins $p4win points</h1>";
-            break;
-        }
-    }
+findWinner($score1,$score2,$score3,$score4);
+   
 }
 ?>
-
-
