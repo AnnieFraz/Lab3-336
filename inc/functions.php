@@ -2,7 +2,6 @@
 
 function displayHand($pos, $suitesRandom, $numberRandom)
 {
-  
 switch ($suitesRandom)
             {
                 case 0: $symbol ='clubs';
@@ -14,9 +13,7 @@ switch ($suitesRandom)
                 case 3: $symbol = 'spades';
                     break;
             }
-                
             echo "<img id='card$pos' src='img/$symbol/$numberRandom.png' width='75'/>";
-           
 }
 
 function getHand()
@@ -25,11 +22,9 @@ function getHand()
     $avail = array(); // for checking if a card has been used (not 100% working)
     for ($n = 0; $n < 4; $n++)
     {
-
         $j = rand(1,4);             //from here to
-        while($taken[$j-1] == 10)
+        while($taken[$j-1] == 10) // makes sure each player is used once
         {
-                                        // makes sure each palyer is used once
             $j = rand(1,4);
         }
         $taken[$j-1] = 10;          // here
@@ -42,7 +37,6 @@ function getHand()
             $numberRandom = rand(1,13);
             if ($avail[$numberRandom][$suitesRandom] == 100)    //from here
             {
-                //print($numberRandom." ".$suitesRandom);
                 $suitesRandom = rand(0,3);
                 $numberRandom = rand(1,13);
             }
@@ -57,7 +51,7 @@ function getHand()
             displayHand($i, $suitesRandom, $numberRandom);
             ${"score" . $j} = ${"score" . $j} + $numberRandom;
     
-            if (${"score" . $j} > 35 && ${"score" . $j} <=42)   // decides when to stop (adjust this to prevent multiple winners)
+            if (${"score" . $j} > 30 && ${"score" . $j} <=42)   // decides when to stop (adjust this to prevent multiple winners)
             {
                 $cont = false;
             }
@@ -65,9 +59,9 @@ function getHand()
         echo ${"score" . $j};
         echo "<br>";
     }
-<<<<<<< HEAD
+    //win totals
     $p1win = $score2+$score3+$score4;
-    $p2win = $score1+$score3+$score4;   //win totals
+    $p2win = $score1+$score3+$score4;   
     $p3win = $score2+$score1+$score4;
     $p4win = $score2+$score3+$score1;
     for ($s=42; $s > 35; $s--)
@@ -92,14 +86,7 @@ function getHand()
             echo "<h1>Dani wins $p4win points</h1>";
             break;
         }
-=======
-    
-    //displayWinners($i, $numberRandom);
-    
->>>>>>> a4107784a9610cd732f6e403bcca46ac08a8d4f3
     }
-     
-   
 }
 ?>
 
